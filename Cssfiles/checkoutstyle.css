@@ -1,0 +1,61 @@
+.checkoutcontainer{
+    width:70%;
+    height:80vh;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.addressinfo{
+    width:25%;
+    padding:10px;
+    height:300px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
+}
+#demo{
+    margin-top:10px;    
+}
+.changeadressbtn{
+    background-color: transparent;
+    color:#83AE45;
+    border: 2px solid #83AE45;
+    padding:10px;
+    margin-top:10px;    
+}
+.changeadressbtn:hover{
+    background-color: #83AE45;
+    color:white;
+    cursor: pointer;
+}
+.paymentarea{
+    width:40%;
+    padding:10px;
+    height:100%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+hr {
+    border: none;
+    height: 1px; 
+    background-color: #83AE45;
+    margin: 20px 0; 
+}
+.order-summery{
+    width:30%;
+    padding:10px;
+    height:50%; 
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.subtotal,.shipping,.totalamount{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    margin:20px 0px;
+ }
+ .subtotal p:nth-child(1),.shipping p:nth-child(1),.totalamount p:nth-child(1){
+    font-weight: bold;
+    font-size: 20px;
+ }

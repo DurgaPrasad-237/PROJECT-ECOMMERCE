@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Cssfiles/styles.css"/>
+        <link rel="stylesheet" href="Cssfiles/homeresponsive.css"/>
+
+        <title>Homepage</title>
+    </head>
+    <body>
+
+         <!-- navbar start -->
+         <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" class="logoimg">
+            </div>
+
+            <div class="hamburg" id="hamburg" onclick="navBarToggle()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="expand-navbar" id="expandnav">
+              <div class="nav-links-container">
+                  <a href="index.html">Home</a>
+                  <a>Profile <i class="fa-solid fa-user"></i></a>
+                  <a>Shop</a>
+                  <a>About</a>
+                  <a>Cart <i class="fa-solid fa-cart-shopping"></i></a>
+                  <a>Orders List  <i class="fa-solid fa-boxes-packing"></i></a>
+                  <a>Logout  <i class="fa-solid fa-right-from-bracket"></i></a>
+              </div>
+            </div>
+
+            <ul class="navlinks">
+                
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
+                    <li><a href="index.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li>
+                    
+            </ul>
+            <div class="sub-menu-wrap">
+                    <div class="sub-menu" id="submenu">
+                        <div class="user-info">
+                            <img src="images/Profileimg.png" alt="profileimage">
+                            <p id="username">Durga Prasad</p>
+                        </div>
+                        <hr>
+                        <a href="Profile_Edit.html" class="editprofile">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Edit Profile</p>
+                        </a>
+
+                        <a href="#editprofile" class="editprofile">
+                            <i class="fa-solid fa-boxes-packing"></i>
+                            <p>Orders list</p>
+                        </a>
+
+                        <a href="#editprofile" class="editprofile">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p>Log out</p>
+                        </a>
+                    </div>
+            </div>
+            
+        </nav>
+    <!-- navbar end -->
+
+
+        <section id="container1">
+            <img class="homeimage" src="images/homeimage.webp" alt="homeimage">
+        </section>
+
+
+        <!-- core values start point -->
+        <section id="container2">
+            <h2 class="headings">Core Values</h2>
+                 <div class="corevalues-container">
+
+                     <div class="corevalues">
+                         <img src="images/quality.png" alt="Avatar" class="image">
+                         <div class="overlay">
+                           <div class="text">Quality</div>
+                         </div>
+                       </div>
+
+                       <div class="corevalues">
+                         <img src="images/sustainability.png" alt="Avatar" class="image">
+                         <div class="overlay">
+                           <div class="text">Sustainability</div>
+                         </div>
+                       </div>
+
+                       <div class="corevalues">
+                         <img src="images/Integrity.png" alt="Avatar" class="image">
+                         <div class="overlay">
+                           <div class="text">
+                             Integrity
+                             
+                          </div>
+                         </div>
+                       </div>
+
+                       <div class="corevalues">
+                         <img src="images/simplicity.png" alt="Avatar" class="image">
+                         <div class="overlay">
+                           <div class="text">Simplicity</div>
+                         </div>
+                       </div>
+                 </div>
+             </div>
+         </section>
+
+        <!-- core values end point-->
+
+
+        <section id="container3">
+           <div>
+            <img src="images/Turmericpowder.webp">
+           </div>
+           <div>
+                <h2>Smart Functional Foods</h2>
+                <a>Shop Now</a>
+           </div>
+           <div>
+            <img src="images/redmirchi.jpg">
+           </div>
+           <div>
+            <img src="images/Rawgroundnuts.webp">
+           </div>
+           <div>
+            <img src="images/millets.webp">
+           </div>
+           <div>
+            <img src="images/Kidneybeans.jpg">
+           </div>
+        </section>
+
+
+          <!-- footer start point -->
+          <footer id="contact">
+                    
+
+            <div class="address">  
+                <p><i class="fa-solid fa-location-dot"></i><strong class="addressheading">   Address</strong></p>
+                <p>T 207 Lounge 1<br> Mk Gold Coast <br>Nr Gitam College<br>Yendada<br>Vishakapatnam 530045</p><br>
+                <p><i class="fa-solid fa-phone"></i> <strong>9967367000</strong></p><br>
+                <p><i class="fa-solid fa-envelope-open"></i> <strong>lathak64@gmail.com</strong></p>
+            
+            </div>
+
+            <div class="social-media">
+                <p><i class="fa-solid fa-hashtag"></i> <strong>Social Media</strong></p>
+                <p><i class="fa-brands fa-square-instagram"></i> <strong>lathakanakagiri</strong></p>
+                <p><i class="fa-brands fa-square-facebook"></i> Latha Kanakagiri</p>
+                <p><i class="fa-brands fa-linkedin"></i> Latha K</p>
+            </div>
+
+            <div class="footerimage">
+
+
+
+            </div>
+
+        </footer>
+        <!-- footer end point -->
+      
+
+
+
+
+        <!-- <script src="script.js"></script> -->
+        <script src="script.js"></script>
+    </body>
+</html>

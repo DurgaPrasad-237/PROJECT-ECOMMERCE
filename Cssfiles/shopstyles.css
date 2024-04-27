@@ -1,0 +1,129 @@
+html{
+    scroll-behavior: smooth;
+}
+.shop-container1{
+    border:2px solid black;
+    height:400px    ;
+    width:100%;
+    margin-top:80px;
+   
+}
+.shop-container1 img{
+    height:400px;
+    width:100%;
+}
+.shopoverlay{
+    background-color: rgba(36, 32, 32, 0.434);
+    position: absolute;
+    top:0px;
+    z-index: 20px;
+    height:400px;
+    width:100%;
+    margin-top:80px;
+}
+/* category bar start*/
+.categorybar{
+    height:60px;
+    width:100%;
+    margin-top:30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+.categorybar div{
+    border:2px solid #83AE45;
+    height:50px;
+    width:200px;
+    margin:10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+    color:#83AE45;
+}
+.categorybar div a{
+    color:black;
+    text-decoration: none;
+}
+.categorybar div:hover{
+    background-color: #83AE45;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* category bar end*/
+
+/* category1 products start */
+.category1-heading,.category2-heading{
+   margin-left: 120px;
+}
+.category1-products,.category2-products{
+  
+    height:auto;
+    width:100%;
+
+    padding:30px;
+}
+.products-container{
+   
+    height:auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width:90%;
+    margin:auto auto;
+ 
+}
+.productcard{
+    height:420px;
+    width:280px;
+    margin:20px;
+    background-color: #F1F1F1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-image-container{
+    height:180px;
+    width:100%;
+}
+.product-image-container img{
+    height:180px;
+    width:100%;
+}
+.pId{
+    display: none;
+}
+.desc{
+    text-align: center;
+    font-size: 14px;
+}
+.price-quantity{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;    
+}
+.price-quantity p{
+    margin: 0 15px;
+}
+.cartbutton{
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #83AE45;
+    color:#83AE45;
+    transition: ease .4s; 
+}
+.cartbutton:hover{
+background-color: #83AE45;
+color:white;
+}
+

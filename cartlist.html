@@ -21,8 +21,7 @@
                 
                     <li><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
                     <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
                     <li><a href="index.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li>
                 
@@ -39,15 +38,15 @@
                         <p>Edit Profile</p>
                     </a>
 
-                    <a href="#editprofile" class="editprofile">
+                    <a href="orderslist.html" class="editprofile">
                         <i class="fa-solid fa-boxes-packing"></i>
                         <p>Orders list</p>
                     </a>
 
-                    <a href="#editprofile" class="editprofile">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <p>Log out</p>
-                    </a>
+                    <a href="login.html" class="editprofile">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <p>Log in</p>
+                      </a>
                 </div>
         </div>
         
@@ -74,26 +73,13 @@
         </section>
 
         <!-- Address area start -->
-        <section class="addressarea cart-addressarea" id="address-area">
-            <i class="fa-solid fa-xmark address-close-btn" onclick="closeCartaddressarea()"></i>
-            <div class="addaddress-block">
-                <textarea id="addressInput" rows="8" cols="40" placeholder="Enter your address (Example)
-House No:
-street name:
-city name:
-pincode:
-district name:
-state name:
-"></textarea>
-                <button id="addAddressButton">Add Address</button>
-            </div>
-            <div class="youraddress-viewblock">
-                <h3>Choose a delivery address:</h3>
-                <div><p id="displayAddress"></p><button></button></div>
-            </div>
-        </section>
+       <section class="delivery-address-area">
+            <!-- <div class="delivery-addresses"></div> -->
+           
+
+       </section>
  
-        <script src="script.js"></script>
-        <script src="cart-address-script.js"></script>
+        <script src="script/script.js"></script>
+        <script src="script/cart-address-script.js"></script>
     </body>
 </html>

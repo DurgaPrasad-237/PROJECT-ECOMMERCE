@@ -81,22 +81,23 @@ body{
 }
 .editform{
     width:100%;
-    height:100%;
-    padding:20px;
+    height:55%;
+    padding:8px;
+  
 }
 
-.name,.age,.phno,.mail,.currentpassword,.newpassword,.confirmpassword{
+.profile-edit-content{
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-bottom: 20px;
+
 }
-.name label,.age label,.phno label,.mail label,.currentpassword label,.newpassword label,.confirmpassword label{
+.profile-edit-content label{
     font-size: 20px;
-    margin:30px 10px;
+    margin:10px 10px;
     width:150px;
 }
-.name input[type="text"],.age input[type="number"],.phno input[type="number"],.mail input[type="email"]{
+.profile-edit-content input[type="text"],.profile-edit-content input[type="number"],.profile-edit-content input[type="email"]{
     border:none;
     border-bottom: 2px solid black;
     outline: none;
@@ -106,10 +107,9 @@ body{
 }
 
 .submit-wrapper {
-    padding: 20px;
     cursor: pointer;
-    width: 150px;
-    border-radius: 20px;
+    width: 100px;
+    border-radius: 10px;
     border: 2px solid #83AE45;
     height: 40px;
     display: flex;
@@ -118,7 +118,7 @@ body{
     transition: ease .4s;
 }
 
-#submitbtn,#chagepassbtn,#addressaddbtn {
+#submitbtn,#addressaddbtn {
     background-color: transparent;
     border: none;
     color: #83AE45;
@@ -132,28 +132,144 @@ body{
 
 .submit-wrapper:hover {
     background-color: #83AE45;
+ 
 }
 /* edit area end */
 
-/* password area */
-.passwordarea{
-    position:absolute;
-    height:100vh;
-    width:0px;
-    top:0;
-    right:0;
-    z-index: 1100;
-    background-color: rgb(240, 248, 255);
-    transition: ease .6s;
+
+
+
+/* addressarea starts*/
+.addresseditarea{
+    height:50%;
+    position: relative;
 }
-.passwordarea.open-passwordarea{
-    width:500px;
+.addaddressform{
+    height:90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.adddiv-1{
+    width:300px;
+}
+.adddiv-2{
+    width:300px;
+}
+.add-address{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:10px;
+}
+.add-address label{
+    font-size: 18px;
+}
+.add-address input[type="text"]{
+    border:none;
+    border-bottom:2px solid black;
+    outline: none;
+}
+#addsubmitbtn{
+    width:100px;
+    position:absolute;
+    left:10px;
+    top:80%; 
+    padding:8px;
+    background-color: transparent;
+    color:#83AE45 ;
+    border:2px solid #83AE45;  
+    border-radius: 10px;
+}
+#addsubmitbtn:hover{
+    color:white;
+    background-color: #83AE45;
+    cursor:pointer;
+}
+
+/* address display start */
+.addressdisplay-area{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+    background-color: white;
+    height:80vh;
+    width:30%;
+    position:fixed;
+    top:100px;
+    left:60%;
+    padding:10px;
+    overflow: auto;
+    display: none;
+   flex-wrap: wrap;
+
+}
+.addressdisplay-area-open{
+    display: flex;  
 }
 .fa-xmark{
-    margin-left:50px;
-    margin-top:50px;
-    font-size: 30px;
+    font-size: 25px;
+}
+.fa-xmark:hover{
+    color:#83AE45
+}
+.displayaddress{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width:80%;
+    height:auto;
+    margin:10px auto;
+    padding:10px;
+    font-size: 18px; 
+}
+.displayaddress:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.editandelete{
+    height:30px;
+    width:120px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-pen-to-square{
+    color:#83AE45;
+}
+.fa-trash{
+    color:rgb(148, 16, 16)
+}
+.fa-pen-to-square:hover,.fa-trash:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
+}
+/* address display end */
+
+/* password start area */
+.display-passwordarea{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height:50vh;
+    width:70vh;
+    position:relative;
+    left:550px;
+    top:-500px;   
+    display:none;
+    align-items: center;
+    flex-direction: column;
+}
+.display-passwordarea h4{
+    margin-top: 20px;
+    font-size: 20px;
+    color:#83AE45
+}
+
+.openPasswordarea{
+    display:flex;
+}
+.changepassword_form{
+    display:flex;
+    flex-direction: column;
+   align-items: center;
+   width:100%;
 }
 .currentpassword input[type="password"],.newpassword input[type="password"],.confirmpassword input[type="password"]{
     border:none;
@@ -169,116 +285,38 @@ body{
     background-color: transparent;
     width:250px;
 }
-.changepassword_form{
-    padding:10px;
+.currentpassword,.newpassword,.confirmpassword{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width:90%;
+    margin-top:30px;
+    justify-content: space-around;
 }
-.showpass{
-    margin-left:10px ;
-    cursor: pointer;
+.currentpassword label,.newpassword label,.confirmpassword label{
+    font-size: 15px;
+    font-weight: 600;;
+}
+#chagepassbtn{
+    background-color: transparent;
+    padding:10px;
+    width:150px;
+    border-radius: 10px;
     color:#83AE45;
+    border:2px solid #83AE45;
+    margin-top: 30px;
 }
-/* password area end */
-
-/* addressarea starts*/
-
-.addressarea {
-    width: 500px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1100;
-    background-color: aliceblue;
-    padding:20px;
-    opacity:0;
-    height: 0;
-    visibility: hidden;
-    transition: height 0.5s ease, opacity 0.5s ease, visibility 0s 0.5s;
-    overflow: auto;
-}
-.address-close-btn{
-    margin-top:0px;
-    margin-bottom: 20px;
-    margin-left: -5px;
-}
-.addressarea-open{
-    opacity:1;
-    height:100vh;
-    visibility: visible;
-    transition-delay: 0s;
-  
-}
-
-.addaddress-block {
-    margin-bottom: 20px;
-}
-
-#addressInput {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#addAddressButton {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+.showpass:hover{
     cursor: pointer;
-    border-radius: 5px;
 }
-
-#addAddressButton:hover {
-    background-color: #45a049;
-}
-
-.youraddress-viewblock {
-    padding: 10px;
-    border-top: 1px solid #ccc;
-   
-}
-.youraddress-viewblock div{
-    padding:10px;
-    height:auto;
-    width:auto;
-}
-.address {
-    margin-bottom: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.address .button-container {
-    display: flex; 
-}
-.address .edit-button{
-    border: 2px solid black;
-    margin:5px 10px;
-    width:80px;
-    padding:5px;   
+.closepass{
+    color:red;
+    padding:5px;
     background-color: transparent;
-    color:#45a049;
-    border: 2px solid #45a049;
-    border-radius: 20px;
-    transition: ease .4s;;
+    border:2px solid red;
+    margin-top:30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
-}
-.address .delete-button{
-    border: 2px solid black;
-    margin:5px 10px;
-    width:80px;
-    padding:5px;   
-    background-color: transparent;
-    color:#ce3420;
-    border: 2px solid #ce3420;
-    border-radius: 20px;
-    transition: ease .4s;
-}
-.address .delete-button:hover{
-    background-color: #ce3420;
-    color:white;
-    cursor: pointer;
-}
-.address .edit-button:hover{
-    background-color: #45a049;
-    color:white;
-    cursor: pointer;
-}
-/* address area ends */
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Cssfiles/login.css"/>
+        <title>Login form</title>
+    </head>
+    <body>
+        <form action="/" method="post">
+            <h1>Log in</h1>
+         
+        <div><label for="email">Email:</label>
+                <input type="email" name="email" id="email"required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label> <input type="password" name="Password" id="Password"required>
+        </div>
+
+        <p class="showpass"><i class="fa-solid fa-eye"></i></p>
+      
+        <p class="dntacc">Dont have an account?<a href="Signup.html">Signup</a><br><span>forgot password</span></p>    
+       
+        <div><input type="submit" value="Sign In" id="submit"></div>
+        </form>
+        <script src="script/login.js"></script>
+    </body>
+</html>

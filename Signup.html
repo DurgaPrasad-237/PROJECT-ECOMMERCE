@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Cssfiles/signup.css"/>
+        <title>Sign up</title>
+    </head>
+    <body>
+        <form action="/" method="post">
+            <h1>Sign Up</h1>
+            <p>welcome to Sunmade!</p><p>sign up to join our company</p>
+            <div>
+            <label for="name">First Name:</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div><label for="lastName">Last Name:</label> <input type="text" name="lastName" id="lastName"required></div>
+        <div>
+            <label for="password">Password:</label> <input type="password" name="Password" id="Password"required>
+        </div>
+        <div><label for="confirm_password">Confirm Password:</label> <input type="password" name="confirm_password" id="confirm_password"required></label></div>
+        <div><label for="email">Email:</label>
+            <input type="email" name="email" id="email"required>
+        </div>
+        <div><label for="phone_number">Phone Number: </label><input type="tel" name="phone_number" id="phone_number"required></div>
+        <div><label for="license">Read and agree to our license/terms?<input type="checkbox" name="license" id="license" required></label></div>
+        <div><input type="submit" value="Sign Up" id="submitbtn"></div>
+        </form>
+    </body>
+</html>

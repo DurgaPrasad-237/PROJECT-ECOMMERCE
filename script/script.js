@@ -134,7 +134,7 @@ function displayCartItems(){
 
     //proceed to checkout
     let checkout = document.createElement("div");
-    checkout.innerHTML = `<a class="proceedbtn" onclick="cartAddressOpen()">Proceed to Buy</a>`;
+    checkout.innerHTML = `<a class="proceedbtn" onclick="openAddressarea()">Proceed to Buy</a>`;
     billingarea.appendChild(checkout);
 
 }

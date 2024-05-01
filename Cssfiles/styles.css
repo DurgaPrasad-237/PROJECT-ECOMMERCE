@@ -12,7 +12,7 @@ html{
 
 /* navigation bar starts */
 .navbar{
-  height:90px;
+  height:100px;
   width:100%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
@@ -36,8 +36,8 @@ html{
   
 }
 .logoimg{
-  max-height: 90px;
-  max-width:90px;
+  max-height: 100px;
+  max-width:100px;
 }
 /* logo div box end */
 
@@ -164,7 +164,7 @@ a:hover::after{
   margin: 10px 10px;
 }
 .editprofile .fa-user,.editprofile .fa-boxes-packing
-,.editprofile .fa-right-from-bracket{
+,.editprofile .fa-right-to-bracket{
   margin:10px;
   color:white;
 }
@@ -278,6 +278,9 @@ a:hover::after{
   height:300px;
   width:100%;
 }
+#container3 div img:hover{
+  transform: scale(1.1);
+}
 #container3 div:nth-child(2){
   display: flex;
   align-items: center;
@@ -305,41 +308,29 @@ footer{
     align-items: center;
     background-color: #F1F1F1;
   }
-  footer div{
-    margin-left: 50px;
-  }
-  .address{
-    height:200px;
-    width:200px;
+ 
+  .footer__container{
+    margin:auto auto;
 
-    display: flex;  
-    flex-direction: column;
-
+    width:90%;
+    padding:10px;
   }
-  .address p{
-    margin:2px 0px
+  .footer__title,.footer__copy{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  .fa-location-dot,.fa-phone,.fa-envelope-open,.fa-hashtag{
-    color:#83AE45
+  .footer__description{
+    text-align: center;
   }
-  .social-media{
-    height:200px;
-    width:200px;
-    display: flex;  
-    flex-direction: column;
+  .footer__social{
+    margin:15px auto;
+    width:20%;
+    display: flex;
+    align-items: center;
     justify-content: space-around;
+    padding:5px;
   }
-  .fa-square-instagram:hover,.fa-square-facebook:hover,.fa-linkedin:hover{
-    color:#83AE45;
-    cursor: pointer;
-  }
-  .footerimage{
-    height:100%;
-    width:70%;
-    border-top-left-radius: 100%;
-    background-image: url('../images/footerimage.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-  }
+
+
   /* footer end point */

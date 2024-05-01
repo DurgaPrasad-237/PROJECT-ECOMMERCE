@@ -1,278 +1,365 @@
 *, *:before, *:after{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:border-box;
-    box-sizing: border-box;
-  }
-
-.headingcart{
-  margin-top: 100px;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-  /* cartlist start */
-  .container-cart{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    display: none;
-    
-  }
+.headingcart{
+margin-top: 100px;
+text-align: center;
+}
 
-  .cartlistarea{
-    /* border:2px solid black; */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top:40px;
-    height:auto;
-    padding:20px;
-    width:70%;  
-    border-radius: 20px;
-  }
-  .billingarea{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 40px;
-    height:300px;
-    padding:20px;
-    width:20%;  
-    border-radius: 20px;
-  }
- table{
-    width:100%;
-    margin: auto auto;
- }
- td,th,tr{
-    text-align: left;
-    padding:5px;
- }
- td img{
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
- }
-
- table img{
-    height:100px;
-    width:100px;  
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
- }
- /* decrease button */
-.decreasebtn,.increasebtn{
-  background-color: transparent;
-  border-radius: 50%;
-  padding:10px;
-  height:15px;
-  width:15px;
+/* cartlist start */
+.container-cart{
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  color:#83AE45;
-  border:2px solid #83AE45;
+  justify-content: space-around;
+  display: none;
+  
+}
+
+.cartlistarea{
+  /* border:2px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top:40px;
+  height:auto;
+  padding:20px;
+  width:70%;  
+  border-radius: 20px;
+}
+.billingarea{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 40px;
+  height:300px;
+  padding:20px;
+  width:20%;  
+  border-radius: 20px;
+}
+table{
+  width:100%;
+  margin: auto auto;
+}
+td,th,tr{
+  text-align: left;
+  padding:5px;
+}
+td img{
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+table img{
+  height:100px;
+  width:100px;  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* decrease button */
+.decreasebtn,.increasebtn{
+background-color: transparent;
+border-radius: 50%;
+padding:10px;
+height:15px;
+width:15px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 15px;
+color:#83AE45;
+border:2px solid #83AE45;
 
 }
 
 .decreasebtn:hover,.increasebtn:hover,.removebtn:hover{
-  background-color: #83AE45;
-  color: white;
-  cursor: pointer;
+background-color: #83AE45;
+color: white;
+cursor: pointer;
 
 }
 /* quantity button */
 .quantity{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height:120px;  
+display: flex;
+align-items: center;
+justify-content: flex-start;
+height:120px;  
 }
 /* intem quantity */
 .itemquntity{
-  margin:0px 10px;
+margin:0px 10px;
 }
 /* remove button */
 .removebtn{
-  background-color: transparent;
-  padding:15px;
-  border-radius: 20px;
-  color:#83AE45;
-  border:2px solid #83AE45;
-  transition: ease .4s;
+background-color: transparent;
+padding:15px;
+border-radius: 20px;
+color:#83AE45;
+border:2px solid #83AE45;
+transition: ease .4s;
 }
 
 /* billing area */
 .billingarea div{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 200px;
 }
 .container-cart .billingarea hr{
-    margin-top:20px;
+  margin-top:20px;
 }
 .sub-price{
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .billing-sideheading{
-    font-size: 20px;
-    margin-top: 20px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .container-cart .billingarea .proceedbtn{
-    border: 2px solid #83AE45;
-    margin: 20px auto;
-    padding:10px;
-    border-radius: 20px;
-    font-size: 18px; 
-    color:#83AE45
+  border: 2px solid #83AE45;
+  margin: 20px auto;
+  padding:10px;
+  border-radius: 20px;
+  font-size: 18px; 
+  color:#83AE45
 }
 .container-cart .billingarea .proceedbtn:hover{
-    background-color: #83AE45;
-    color:white;
-    cursor: pointer;
+  background-color: #83AE45;
+  color:white;
+  cursor: pointer;
 }
 
 
 /* empty cart */
 #emptycart{
-  height:500px;
-  width:70%;
-  margin:auto auto;
-  display: none;
-  align-items: center;
-  justify-content: center;
+height:500px;
+width:70%;
+margin:auto auto;
+display: none;
+align-items: center;
+justify-content: center;
 }
 #emptycart img{
-  height:400px;
-  width:400px;
+height:400px;
+width:400px;
 }
 #emptycart p{
-  font-size: 30px;
+font-size: 30px;
 }
 .emt{
-  color:#83AE45;
-  font-weight: 600;
-  font-family:Arial, Helvetica, sans-serif
+color:#83AE45;
+font-weight: 600;
+font-family:Arial, Helvetica, sans-serif
 }
 .start{
-  font-weight: 600;
+font-weight: 600;
 }
 .shopnow{
-  font-size: 30px;
-  font-weight: 600;
-  color:#83AE45;
-  transition: ease .4s;
-  
+font-size: 30px;
+font-weight: 600;
+color:#83AE45;
+transition: ease .4s;
+
 }
 .shopnow:hover{
-  margin-left: 10px;
+margin-left: 10px;
 }
-/* address area start*/
-.cart-addressarea{
+/* empty cart end */
+.delivery-address-area{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height:70vh;
+  width:60%;
   position: absolute;
-  overflow: auto;
-  top:0px;
-  z-index: 1100;
-  background-color: aliceblue;
-  width:500px;
-  left:-500px;
-  transition: ease .4s;
+  top:150px;
+  left:100px;
+  background-color: white;
+  display:none;
+  flex-wrap: wrap;
   padding:10px;
-  height:0vh;
+  overflow: auto;
+  justify-content: center;
+}
+.delivery-address-area::-webkit-scrollbar {
+  background-color: transparent;
+  width:5px;
+}
+.delivery-address-area::-webkit-scrollbar-thumb {
+  background-color: #83AE45;
+  height: 5px;
+
+
+}
+
+
+.delivery-address-area .delivery_address, .delivery-address-area .adddelivery-address{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 30vh;
+  width: 50vh;
+  margin: 15px;
+  padding:10px; 
+}
+.adddelivery-address{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.fa-address-book{
+  font-size: 50px;
+  color:rgba(156, 152, 152, 0.799)
+}
+.addheading{
+  font-size: 20px;
+  color:#83AE45; 
+  margin-top: 10px; 
+
+}
+.delivery-address-area-open{
+  display: flex;
+}
+.delivery-address-area .delivery_address:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
+.deliverybutton{
+  padding:10px;
+  background-color: transparent;
+  color:#83AE45;
+  border:2px solid #83AE45;
+  margin-top:10px;
+}
+.deliverybutton:hover{
+  color:white;
+  background-color: #83AE45;
+  cursor:pointer;
+}
+.close-button{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #555;
+}
+.close-button:hover{
+  color:#83AE45;
+}
+
+
+
+
+
+/* address area start
+.cart-addressarea{
+position: absolute;
+overflow: auto;
+top:0px;
+z-index: 1100;
+background-color: white;
+width:500px;
+left:-500px;
+transition: ease .4s;
+padding:10px;
+height:0vh;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 }
 .cart-address-open{
-  left:0px;
-  cursor: pointer;
-  height:100vh;
+left:0px;
+cursor: pointer;
+height:100vh;
 }
 .address-close-btn{
- margin-left: 450px;
- margin-top: 20px;
- font-size: 20px;
+margin-left: 450px;
+margin-top: 20px;
+font-size: 20px;
 }
 .addaddress-block {
-  margin-bottom: 20px;
-  padding:10px;
+margin-bottom: 20px;
+padding:10px;
 }
 
 #addressInput {
-  width: 100%;
-  margin-bottom: 10px;
+width: 100%;
+margin-bottom: 10px;
 }
 #addAddressButton {
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+padding: 8px 16px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
 }
 
 #addAddressButton:hover {
-  background-color: #45a049;
+background-color: #45a049;
 }
 
 .youraddress-viewblock {
-  padding: 10px;
-  border-top: 1px solid #ccc;
- 
+padding: 10px;
+border-top: 1px solid #ccc;
+
 }
 .youraddress-viewblock div{
-  padding:10px;
-  height:auto;
-  width:auto;
+padding:10px;
+height:auto;
+width:auto;
 }
 .address {
-  margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+margin-bottom: 20px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .address .button-container {
-  display: flex; 
+display: flex; 
 }
 .address .edit-button{
-  border: 2px solid black;
-  margin:5px 10px;
-  width:80px;
-  padding:5px;   
-  background-color: transparent;
-  color:#45a049;
-  border: 2px solid #45a049;
-  border-radius: 20px;
-  transition: ease .4s;;
+border: 2px solid black;
+margin:5px 10px;
+width:80px;
+padding:5px;   
+background-color: transparent;
+color:#45a049;
+border: 2px solid #45a049;
+border-radius: 20px;
+transition: ease .4s;;
 
 }
 .address .delete-button{
-  border: 2px solid black;
-  margin:5px 10px;
-  width:80px;
-  padding:5px;   
-  background-color: transparent;
-  color:#ce3420;
-  border: 2px solid #ce3420;
-  border-radius: 20px;
-  transition: ease .4s;
+border: 2px solid black;
+margin:5px 10px;
+width:80px;
+padding:5px;   
+background-color: transparent;
+color:#ce3420;
+border: 2px solid #ce3420;
+border-radius: 20px;
+transition: ease .4s;
 }
 .address .delete-button:hover{
-  background-color: #ce3420;
-  color:white;
-  cursor: pointer;
+background-color: #ce3420;
+color:white;
+cursor: pointer;
 }
 .address .edit-button:hover{
-  background-color: #45a049;
-  color:white;
-  cursor: pointer;
+background-color: #45a049;
+color:white;
+cursor: pointer;
 }
 .address .delivery-button{
-  border: 2px solid black;
-  margin:5px 10px;
-  width:100px;
-  padding:5px;   
-  background-color: transparent;
-  color:#45a049;
-  border: 2px solid #45a049;
-  transition: ease .4s;;
+border: 2px solid black;
+margin:5px 10px;
+width:100px;
+padding:5px;   
+background-color: transparent;
+color:#45a049;
+border: 2px solid #45a049;
+transition: ease .4s;;
 }
 .address .delivery-button:hover{
-  background-color: #45a049;
-  color:white;
-}
+background-color: #45a049;
+color:white;
+} */

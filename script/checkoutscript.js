@@ -2,7 +2,8 @@ function customerAddress() {
     console.log("hi");
     var deliveryAddress = JSON.parse(localStorage.getItem("deliveryAddress"));
     let demo = document.getElementById("demo");
-    demo.innerText = deliveryAddress;
+    demo.innerText = "House no: "+deliveryAddress.houseNo+"\n Street: "+deliveryAddress.street+"\n Town|city: "+deliveryAddress.towncity
+    +"\n pincode: "+deliveryAddress.pincode+"\n state: "+deliveryAddress.state+"\n Country: "+deliveryAddress.country;
 }
 customerAddress();
 

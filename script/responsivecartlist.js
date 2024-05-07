@@ -24,6 +24,7 @@ function displaycartitems(){
         cartsection.style.display = "block";
         let emptycart = document.getElementById("emptycart");
         emptycart.style.display = "none";
+       
          
 
         let tablebody = document.querySelector('.carttable');
@@ -69,6 +70,8 @@ function displaycartitems(){
         cartsection.style.display = "none";
         let emptycart = document.getElementById("emptycart");
         emptycart.style.display = "flex";
+        let billingarea = document.querySelector('.billing');
+        billingarea.style.display = 'none';
        
       
    

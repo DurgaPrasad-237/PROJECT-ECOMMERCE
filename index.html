@@ -1,166 +1,147 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="Cssfiles/styles.css"/>
-        <link rel="stylesheet" href="Cssfiles/homeresponsive.css"/>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Cssfiles/styles.css"/>
+  <title></title>
 
-        <title>Homepage</title>
-    </head>
-    <body>
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" class="logoimg">
+    </div>
 
-         <!-- navbar start -->
-         <nav class="navbar">
-            <div class="logo">
-                <img src="images/logo.png" class="logoimg">
-            </div>
+    <div class="hamburg" id="hamburg" onclick="navBarToggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="expand-navbar" id="expandnav">
+      <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a>Profile</a>
+          <a href="shop.html">Shop</a>
+          <a href="responsivecartlist.html">Cart</a>
+          <a>Logout</a>
+      </div>
+    </div>
 
-            <div class="hamburg" id="hamburg" onclick="navBarToggle()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="expand-navbar" id="expandnav">
-              <div class="nav-links-container">
-                  <a href="index.html">Home</a>
-                  <a>Profile <i class="fa-solid fa-user"></i></a>
-                  <a href="shop.html">Shop</a>
-                  <a href="contactus.html">Contact us</a>
-                  <a>Cart <i class="fa-solid fa-cart-shopping"></i></a>
-                  <a>Orders List  <i class="fa-solid fa-boxes-packing"></i></a>
-                  <a>Logout  <i class="fa-solid fa-right-from-bracket"></i></a>
-              </div>
-            </div>
-
-            <ul class="navlinks">
-                
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
-                    <li><a href="index.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li>
+        <ul class="navlinks">
                     
-            </ul>
-            <div class="sub-menu-wrap">
-                    <div class="sub-menu" id="submenu">
-                        <div class="user-info">
-                            <img src="images/Profileimg.png" alt="profileimage">
-                            <p id="username">Durga Prasad</p>
-                        </div>
-                        <hr>
-                        <a href="Profile_Edit.html" class="editprofile">
-                            <i class="fa-solid fa-user"></i>
-                            <p>Edit Profile</p>
-                        </a>
-
-                        <a href="orderslist.html" class="editprofile">
-                            <i class="fa-solid fa-boxes-packing"></i>
-                            <p>Orders list</p>
-                        </a>
-
-                        <a href="login.html" class="editprofile">
-                           <i class="fa-solid fa-right-to-bracket"></i>
-                            <p>Log in</p>
-                        </a>
-                    </div>
-            </div>
-            
-        </nav>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
+          <li><a href="EditProfile.html"><i class="fa-solid fa-user"></i></a></li>
+          <!-- <li><a href="EditProfile.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li> -->
+          <span class="username">Sign in</span>
+          
+        </ul>
+    </nav>
     <!-- navbar end -->
 
-
-        <section id="container1">
-            <img class="homeimage" src="images/homeimage.webp" alt="homeimage">
-        </section>
-
-
-        <!-- core values start point -->
-        <!-- <section id="container2">
-            <h2 class="headings">Core Values</h2>
-                 <div class="corevalues-container">
-
-                     <div class="corevalues">
-                         <img src="images/quality.png" alt="Avatar" class="image">
-                         <div class="overlay">
-                           <div class="text">Quality</div>
-                         </div>
-                       </div>
-
-                       <div class="corevalues">
-                         <img src="images/sustainability.png" alt="Avatar" class="image">
-                         <div class="overlay">
-                           <div class="text">Sustainability</div>
-                         </div>
-                       </div>
-
-                       <div class="corevalues">
-                         <img src="images/Integrity.png" alt="Avatar" class="image">
-                         <div class="overlay">
-                           <div class="text">
-                             Integrity
-                             
-                          </div>
-                         </div>
-                       </div>
-
-                       <div class="corevalues">
-                         <img src="images/simplicity.png" alt="Avatar" class="image">
-                         <div class="overlay">
-                           <div class="text">Simplicity</div>
-                         </div>
-                       </div>
-                 </div>
-             </div>
-         </section> -->
-
-        <!-- core values end point-->
+      <!-- container 3 start -->
+      <section id="container3">
+        <div>
+         <img src="images/BlackPepper.jpeg">
+         <p class="pnames">BlackPepper</p>
+        </div>
+        <div>
+         <img src="images/Millets.jpeg">
+         <p class="pnames">Millets</p>
+        </div>
+        <div>
+         <img src="images/Groundnuts.jpg">
+         <p class="pnames">Groundnuts</p>
+        </div>
+        <div>
+         <img src="images/Cashew.jpeg">
+         <p class="pnames">Cahsew</p>
+        </div>
+        <div>
+         <img src="images/Kidneybeans.jpeg">
+         <p class="pnames">Kidney Beans</p>
+        </div>
+        <div>
+         <img src="images/Jaggery.jpeg">
+         <p class="pnames">Jaggery</p>
+        </div>
+     </section>
+          <!-- container 3 end -->
 
 
-        <section id="container3">
-           <div>
-            <img src="images/Turmericpowder.webp">
-           </div>
-           <div>
-                <h2>Smart Functional Foods</h2>
-                <a>Shop Now</a>
-           </div>
-           <div>
-            <img src="images/redmirchi.jpg">
-           </div>
-           <div>
-            <img src="images/Rawgroundnuts.webp">
-           </div>
-           <div>
-            <img src="images/millets.webp">
-           </div>
-           <div>
-            <img src="images/Kidneybeans.jpg">
-           </div>
-        </section>
+       <!-- most selling item start -->
+       <section class='sellingItemscontainer'>
+        <h2>Save on your most selling items</h2>
 
+          <div class="sellingproduct-container">
 
-          <!-- footer start point -->
-          <footer class="footer">
-            <div class="footer__container bd-container">
-              <h2 class="footer__title">Smart Functioncal Foods</h2>
-              <p class="footer__description">Here we write the short description</p>
-          
-              <div class="footer__social">
-                <a href="#" class="footer__link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="footer__link"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="#" class="footer__link"><i class="fa-brands fa-facebook"></i></a>
+            <div class="sellingproduct-card">
+              <img src="images/Kidneybeans.jpg" class="productimage">
+              <div class="price-info">
+                <p class="productname">Kidney Beans</p>
+                <p> &#x20B9;<span class="price">400</span></p>
               </div>
-              <p class="footer__copy">&#169; 2024 Clay Doe. All right reserved</p>
             </div>
-          </footer>
-        <!-- footer end point -->
-      
+
+            <div class="sellingproduct-card">
+              <img src="images/Kidneybeans.jpg" class="productimage">
+              <div class="price-info">
+                <p class="productname">Kidney Beans</p>
+                <p> &#x20B9;<span class="price">400</span></p>
+              </div>
+            </div>
+
+            <div class="sellingproduct-card">
+              <img src="images/Kidneybeans.jpg" class="productimage">
+              <div class="price-info">
+                <p class="productname">Kidney Beans</p>
+                <p> &#x20B9;<span class="price">400</span></p>
+              </div>
+            </div>
+            
+          </div>
+
+      </section>
+
+        <!-- most selling item end -->
+
+
+         <!-- footer start point -->
+         <footer class="footer" id="contact">
+          <div class="footer__container bd-container">
+            <h2 class="footer__title">Smart Functioncal Foods</h2>
+            <p class="footer__description">Here we write the short description</p>
+        
+            <div class="footer__social">
+              <a href="#" class="footer__link"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" class="footer__link"><i class="fa-brands fa-square-instagram"></i></a>
+              <a href="#" class="footer__link"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <p class="footer__copy">&#169; 2024 All right reserved</p>
+          </div>
+
+
+          <form class="contact_form">
+            <h2>Contact form</h2>
+            <input type="text" placeholder="Enter Your Name">
+            <input type="email" placeholder="Enter Your Email Address">
+            <textarea rows="10" cols="50" placeholder="message"></textarea>
+            <button>Submit</button>
+          </form>
+
+
+
+        </footer>
+      <!-- footer end point -->
 
 
 
 
-        <!-- <script src="script.js"></script> -->
-        <script src="script/script.js"></script>
-    </body>
+<script src="script/script.js"></script>
+</body>
 </html>
+  

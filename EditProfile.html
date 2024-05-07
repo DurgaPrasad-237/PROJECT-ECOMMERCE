@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Cssfiles/styles.css"/>
+        <link rel="stylesheet" href="Cssfiles/EditProfile.css"/>
+
+
+        <title>Profile Edit</title>
+    </head>
+    <body>
+
+       <!-- navbar start -->
+  <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" class="logoimg">
+    </div>
+
+    <div class="hamburg" id="hamburg" onclick="navBarToggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="expand-navbar" id="expandnav">
+      <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a>Profile</a>
+          <a href="shop.html">Shop</a>
+          <a href="cartlist.html">Cart</a>
+          <a>Logout</a>
+      </div>
+    </div>
+
+        <ul class="navlinks">
+                    
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
+          <li><a href="EditProfile.html"><i class="fa-solid fa-user"></i></a></li>
+          <!-- <li><a href="EditProfile.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li> -->
+          <span class="username">Sign in</span>
+          
+        </ul>
+    </nav>
+    <!-- navbar end -->
+
+        <section class="container">
+                
+                <aside class="side-navbar">
+                    <div class="profile_section">
+                        <img src="images/Profileimg.png" class="profileimage">
+                        <div onclick="profileimagechange()" class="imgchangediv">Change image</div>
+                        <form class="personalinfo">
+                              <input type="text" placeholder="Username" class="userinput" disabled>
+                              <input type="text" placeholder="mobilenumber" class="mobileinput" disabled>
+                              <input type="text" placeholder="Email" disabled>
+                              <input type="submit" value="Update" id="submitinfo">
+                        </form>
+                        <p class="ep" onclick="editprofile()">Edit Profile</p>
+                    </div><hr>
+                    <div class="links_section">
+                        <div class="active" onclick="displayOrdersList()">Orders history</div>
+                        <div onclick="displayAddresses()">Addresses</div>
+                        <div onclick="changepassword()">Password Settings</div>
+                    </div>
+                </aside>
+             
+
+                <!-- if no orders list this will display -->
+                <div class="no_orders_display_section">
+                    <img src="images/search.gif" class="image">
+                    <h2>No orders found</h2>
+                    <p>You haven't placed any order yet.</p>
+                    <a>Shop now <span>></span></a>
+                </div>
+
+                <!-- If orders this will display -->
+                <div class="orders_list_container">
+                    <!-- <div class="orders"></div> -->
+
+                </div>
+
+                <div class="addressescontainer">
+                    
+                </div>
+        </section>
+           <!--password area start-->
+           <div class="passwordarea">
+                <form>
+                    <h4>Change Password</h4>
+                    <input type="password" class="current-input" placeholder="Enter Current Password"><i class="fa-solid fa-eye curr" onclick="currpass()"></i>
+                    <input type="password" class="new-input" placeholder="Enter New Password"><i class="fa-solid fa-eye new" onclick="newpass()"></i>
+                    <input type="password" class="conf-input"placeholder="Enter Confirm Password" oninput="checkPasswordMatch()"><i class="fa-solid fa-eye conf" onclick="confirmpass()"></i>
+                    <p class="checking"></p>
+                    <input type="submit" value="Change">
+                </form>
+                <div class="closepass" onclick="closepass()"><i class="fa-solid fa-xmark"></i></div>
+           </div>
+           <!--password area end -->
+        <script src="script/EditProfile.js"></script>
+        <script src="script/Addaddress.js"></script>
+    </body>
+</html>

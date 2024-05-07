@@ -31,11 +31,11 @@ function addToCart(button) {
     let productCard = button.parentElement;
     let product = {
         id: productCard.querySelector(".pId").innerText,
-        image: productCard.querySelector(".product-image-container img").src,
-        name: productCard.querySelector("h4").innerText,
-        description: productCard.querySelector(".desc").innerText,
-        price: parseInt(productCard.querySelector(".price-quantity p:nth-child(1) span").innerText),
-        quantityAvailable: parseInt(productCard.querySelector(".price-quantity p:nth-child(2) span").innerText),
+        image: productCard.querySelector(".productimage").src,
+        name: productCard.querySelector(".productname").innerText,
+        // description: productCard.querySelector(".desc").innerText,
+        price: parseInt(productCard.querySelector(".price").innerText),
+        // quantityAvailable: parseInt(productCard.querySelector(".price-quantity p:nth-child(2) span").innerText),
         quantity: 1 
     };
    
@@ -92,6 +92,7 @@ function displayCartItems(){
     tableBody.innerHTML = `<tr><th></th><th>ProductName</th><th>Quantity</th><th>Price</th><th></th></tr>`;
     cartlist.forEach(item => {
         let row = document.createElement("tr");
+   
         let itemTotalPrice = item.price * item.quantity;
         subtotalPrice += itemTotalPrice; 
         totalprice = subtotalPrice + shippingcost;
@@ -104,9 +105,10 @@ function displayCartItems(){
                 <button class="increasebtn" onclick="increaseQuantity('${item.id}')">+</button>
             </td>
             <td>${itemTotalPrice}</td>
-            <td><button class="removebtn" onclick="deleteItemFromCart('${item.id}')">Remove</button></td>
+            <td><i class="fa-solid fa-trash" onclick="deleteItemFromCart('${item.id}')"></i></td>
         `;
         tableBody.appendChild(row);
+     
     });
 
     let billingarea = document.querySelector('.billingarea');
@@ -182,10 +184,12 @@ function deleteItemFromCart(productId) {
 
 
 
+//for displaying carts
 if (window.location.pathname.endsWith("cartlist.html")) {
     window.onload = displayCartItems;
 }
 else{
     window.onload = countCartItems;
 }
+
 

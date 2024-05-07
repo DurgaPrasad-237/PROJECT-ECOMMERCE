@@ -4,7 +4,7 @@ function openAddressarea(){
     let container_cart = document.querySelector(".container-cart");
     let delivery_address_area = document.querySelector(".delivery-address-area");
     container_cart.style.filter = 'blur(5px)';
-    delivery_address_area.classList.add('delivery-address-area-open');
+    delivery_address_area.style.display = 'flex';
     displayAddress();
 }
 //function for displayaddress
@@ -37,11 +37,12 @@ function displayAddress(){
 
         // Populate the div with address details
         delivery_address.innerHTML = `
-            <p><b>House No:</b> ${address.houseNo}</p>
+            <p><strong>${address.fullname}</strong></P>
+            <p><b>House No:</b> ${address.houseno}</p>
             <p><b>Street:</b> ${address.street}</p>
             <p><b>Pincode:</b> ${address.pincode}</p>
             <p><b>Landmark:</b> ${address.landmark}</p>
-            <p><b>Town/City:</b> ${address.towncity}</p>
+            <p><b>Town/City:</b> ${address.city}</p>
             <p><b>State:</b> ${address.state}</p>
             <p><b>Country:</b> ${address.country}</p>
         `;
@@ -69,8 +70,9 @@ function addadress(){
 function closeAddressContainer() {
     let addressContainer = document.querySelector('.delivery-address-area');
     let container_cart = document.querySelector(".container-cart");
-    container_cart.style.filter = 'none';
     addressContainer.style.display = 'none';
+    container_cart.style.filter = 'none';
+
 }
 //function for delivery address
 

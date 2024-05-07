@@ -302,6 +302,7 @@ margin-left: 100px;
         width: 130vh;
         justify-content: center;
         flex-direction: column;
+        ;
     }
     #container3 div{
         height:500px;

@@ -1,0 +1,105 @@
+.cartheading{
+    margin-top:130px;
+    text-align: center;
+}
+.cartsection{
+  
+    height:auto;
+    width:100%;
+    padding:10px;
+    margin:0px auto;   
+    margin-bottom: 100px;
+ 
+}
+table{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+tr{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0px auto;
+    width:100%;
+}
+table tr td{
+   margin: 10px 10px;
+    width:100%;
+    height:130px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+td img{
+    width:100px;
+    height:100px;
+    border-radius: 20px;
+    margin: 0px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+td div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+td:nth-child(2){
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+}
+td:nth-child(2) div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between; 
+    width:80px;
+}
+td button{
+    border-radius: 50%;
+    height:20px;
+    width:20px;
+    border:none;
+}
+.fa-trash{
+    color:rgb(117, 9, 9);
+}
+tr{
+    background-color:#338b33;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    margin:10px 0px;
+}
+
+
+.billing{
+    height:80px;
+    width:100%;
+    padding:10px;   
+    bottom:0px;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: white;
+}
+.billing button{
+    padding:10px;
+    background-color: transparent;
+    border-radius: 10px;
+    color:#338b33;
+    border:2px solid #338b33;
+}
+.billing button:hover{
+    background-color: #338b33;
+    color:white;
+}

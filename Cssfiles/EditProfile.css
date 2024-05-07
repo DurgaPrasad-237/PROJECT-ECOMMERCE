@@ -1,0 +1,353 @@
+
+.container{
+
+    margin-top: 130px;
+    width:85%;
+    margin-left:auto;
+    margin-right: auto;
+    height:75vh;
+    padding:10px;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: space-between;
+
+}
+/* side nav start */
+.side-navbar{
+    height:100%;
+    padding: 5px;
+    width:25%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    position: relative;
+ 
+}
+.profile_section{
+    height:35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.imgchangediv{
+    border:2px solid #338b33;
+    width:100px;
+    border-radius: 10px;
+    height:25px;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right:10px;
+    top:60px;
+    color:white;
+    background-color: #338b33;
+    cursor:pointer;
+}
+.imgchangediv:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.profile_section img{
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.personalinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width:100%;
+    height:50%;
+}
+.personalinfo input[type="text"]{
+    width:100%;
+    border:none;
+    outline:none;
+    text-align: center;
+    background-color: transparent;
+
+}
+.personalinfo input::placeholder{
+    text-align: center;
+}
+#submitinfo{
+    position: absolute;
+    right:10px;
+    top:28%;
+    background-color:#83AE45;
+    color:white;
+    border:2px solid #83AE45;
+    padding:4px;
+    display: none;
+    cursor: pointer;
+}
+
+
+.ep{
+    position: absolute;
+    right:10px;
+    top:10px;
+    font-size: 12px;
+    color:red;
+    cursor: pointer;
+}
+.links_section{
+    /* border:2px solid black; */
+    height:65%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+ 
+}
+.links_section div{
+    height:10%;
+    width:100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  
+}
+.links_section div:hover{
+    background-color: #82ae4591;
+    color:white;
+}
+.links_section div.active {
+    background-color: #83AE45;
+    color: white;
+}
+/* side nav end */
+
+
+
+/* orders history display */
+.no_orders_display_section{
+
+    width:100px;
+    height:95%;
+    width:73%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.image{
+    height:200px;
+    width:200px;
+}
+.no_orders_display_section h2{
+    font-size: 30px;
+}
+.no_orders_display_section a{
+    font-size: 20px;
+    color:#83AE45;
+    cursor: pointer;
+    transition: ease .4s;
+}
+.no_orders_display_section a:hover{
+    margin-left: 10px;
+}
+.orders_list_container{
+    display: flex;
+ 
+    width:73%;
+    height:100%;
+    padding:10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto;
+
+}
+.orders{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height:auto;
+    width:40%;
+    margin:10px 10px; 
+    border-radius: 20px;
+    padding:10px;
+    position: relative;
+
+}
+.orders:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.orders .ordernumber_status{
+    /* text-align: center; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.ordernumber_status span{
+    color:#83AE45;
+    font-size: 18px;
+}
+.items,.totalamount,.orderdate{
+    margin-left: 20px;
+    font-size: 20px;
+    color:#838581;
+    margin-top: 10px;  
+}
+.orders li{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.orders p{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.viewdetailsbtn{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    padding:10px;
+    background-color: transparent;
+    background-color: #83AE45;
+    color: white;
+    border: 2px solid #83AE45;
+}
+.viewdetailsbtn:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+
+/* addresses */
+.addressescontainer{
+    display: none;
+    width:73%;
+    height:100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.addressblock,.addaddressblock{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height:30vh;
+    width:30%;
+    padding:10px;
+    margin:10px 10px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+.addaddressblock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.addaddressblock i{
+    color:#838581;
+    font-size: 30px;
+}
+.addaddressblock a{
+    margin-top: 10px;
+}
+.addressblock:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.addressblock span{
+    font-weight: bold;
+    color:#838581
+}
+.editandelete{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width:100px;
+    padding:10px;
+}
+.editandelete div:nth-child(1){
+    color:#83AE45
+}
+.editandelete div:nth-child(2){
+    color:rgb(159, 6, 6);
+}
+.editandelete div:nth-child(1):hover,.editandelete div:nth-child(2):hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor:pointer
+}
+/* change password */
+.links_section div:nth-child(4){
+    height:0vh;
+    margin-top:5px;
+}
+.links_section div:nth-child(4):hover{
+    background-color: white;
+}
+/* password area start */
+.passwordarea{
+    position: absolute;
+    background-color: white;
+    height:50vh;
+    width:50vh;
+    top:30vh;
+    left:40vw;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 15px;
+}
+.passwordarea form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin:auto auto;
+
+    height:90%;
+    width:90%;
+}
+.passwordarea form input{
+    margin:10px auto;
+    width:100%;
+    height:50px;
+    border:none;
+    border-bottom: 2px solid black;
+    outline:none;
+    background-color: transparent;
+}
+.closepass{
+    position: absolute;
+    top:15px;
+    left:15px;
+    color:#83AE45;
+    cursor: pointer;
+}
+.curr,.new,.conf{
+    position: absolute;
+    right:25px;
+    top:70px; 
+    color:#83AE45;
+    cursor: pointer;
+}
+.new{
+    top:140px;  
+}
+.conf{
+    top:210px;  
+}
+.passwordarea form input[type="submit"]{
+    border:2px solid #338b33;
+    padding:10px;
+    color:white;
+    background-color: #338b33;
+    cursor:pointer;
+}
+.passwordarea form input[type="submit"]:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Cssfiles/styles.css"/>
+        <link rel="stylesheet" href="Cssfiles/addnewaddress.css"/>
+    
+
+        <title>Add address</title>
+    </head>
+    <body>
+         <!-- navbar start -->
+   <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" class="logoimg">
+    </div>
+
+    <div class="hamburg" id="hamburg" onclick="navBarToggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="expand-navbar" id="expandnav">
+      <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a>Profile</a>
+          <a href="shop.html">Shop</a>
+          <a href="cartlist.html">Cart</a>
+          <a>Logout</a>
+      </div>
+    </div>
+
+        <ul class="navlinks">
+                    
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
+          <li><a href="EditProfile.html"><i class="fa-solid fa-user"></i></a></li>
+          <!-- <li><a href="EditProfile.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li> -->
+          <span class="username">Sign in</span>
+          
+        </ul>
+    </nav>
+    <!-- navbar end -->
+        <h2>Add a new address</h2>
+
+        <form>
+            <div>
+                <label>Country</label>
+                <select id="country">
+                    <option value="India">India</option>
+                    <option value="USA">usa</option>
+                </select>
+            </div>
+            <div>
+                <label>Full Name (lastname/firstname)</label>
+                <input type="text" id="fullname" maxlength="25">
+            </div>
+            <div>
+                <label>Mobile Number</label>
+                <input type="text" id="mobilenumber" maxlength="15">
+            </div>
+            <div>
+                <label>PinCode</label>
+                <input type="text" id="pincode" maxlength="10">
+            </div>
+            <div>
+                <label>House no</label>
+                <input type="text" id="houseno" maxlength="10">
+            </div>
+            <div>
+                <label>street/Area</label>
+                <input type="text" id="street" maxlength="20">
+            </div>
+            <div>
+                <label>LandMark</label>
+                <input type="text" id="landmark" maxlength="20">
+            </div>
+            <div>
+                <label>Town/city</label>
+                <input type="text" id="towncity" maxlength="20">
+            </div>
+            <div>
+                <label>State</label>
+                <select id="state">
+                    <option value="Telangana">Telangana</option>
+                    <option value="AP">Ap</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Add address" id="address">
+        </form>
+
+        <script src="script/Addaddress.js"></script>
+    </body>
+    </html> 

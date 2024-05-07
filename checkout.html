@@ -11,47 +11,38 @@
         <title>CheckOut</title>
     </head>
     <body>
-         <!-- nav start -->
-         <nav class="navbar">
-            <div class="logo">
-                <img src="images/logo.png" class="logoimg">
-            </div>
+   <!-- navbar start -->
+   <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" class="logoimg">
+    </div>
 
-            <ul class="navlinks">
-                
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
-                    <li><a href="index.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li>
-                
-            </ul>
-            <div class="sub-menu-wrap">
-                <div class="sub-menu" id="submenu">
-                    <div class="user-info">
-                        <img src="images/Profileimg.png" alt="profileimage">
-                        <p id="username">Durga Prasad</p>
-                    </div>
-                    <hr>
-                    <a href="Profile_Edit.html" class="editprofile">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Edit Profile</p>
-                    </a>
+    <div class="hamburg" id="hamburg" onclick="navBarToggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="expand-navbar" id="expandnav">
+      <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a>Profile</a>
+          <a href="shop.html">Shop</a>
+          <a href="cartlist.html">Cart</a>
+          <a>Logout</a>
+      </div>
+    </div>
 
-                    <a href="orderslist.html" class="editprofile">
-                        <i class="fa-solid fa-boxes-packing"></i>
-                        <p>Orders list</p>
-                    </a>
-
-                    <a href="login.html" class="editprofile">
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                        <p>Log in</p>
-                      </a>
-                </div>
-        </div>
-        
-            
-        </nav>
+        <ul class="navlinks">
+                    
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
+          <li><a href="EditProfile.html"><i class="fa-solid fa-user"></i></a></li>
+          <!-- <li><a href="EditProfile.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li> -->
+          <span class="username">Sign in</span>
+          
+        </ul>
+    </nav>
+    <!-- navbar end -->
 
         <section class="checkoutcontainer">
             <div class="addressinfo">

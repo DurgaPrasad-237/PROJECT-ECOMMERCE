@@ -103,3 +103,38 @@ tr{
     background-color: #338b33;
     color:white;
 }
+#emptycart{
+    height:400px;
+    width:70%;
+    margin:auto auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    }
+    #emptycart img{
+    height:100px;
+    width:100px;
+    }
+    #emptycart p{
+    font-size: 20px;
+    }
+    .emt{
+    color:#83AE45;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif
+    }
+    .start{
+    font-weight: 600;
+    }
+    .shopnow{
+    font-size: 20px;
+    font-weight: 600;
+    color:#83AE45;
+    transition: ease .4s;
+    
+    }
+    .shopnow:hover{
+    margin-left: 10px;
+    }

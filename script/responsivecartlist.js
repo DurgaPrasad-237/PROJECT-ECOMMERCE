@@ -22,6 +22,9 @@ function displaycartitems(){
     if(cartlist.length != 0){
         let cartsection = document.querySelector('.cartsection');
         cartsection.style.display = "block";
+        let emptycart = document.getElementById("emptycart");
+        emptycart.style.display = "none";
+         
 
         let tablebody = document.querySelector('.carttable');
         tablebody.innerHTML = '';
@@ -60,9 +63,12 @@ function displaycartitems(){
         checkout.innerHTML = `Procced to Buy`;
         billingarea.append(checkout);
     }
+
     else{
         let cartsection = document.querySelector('.cartsection');
         cartsection.style.display = "none";
+        let emptycart = document.getElementById("emptycart");
+        emptycart.style.display = "flex";
        
       
    

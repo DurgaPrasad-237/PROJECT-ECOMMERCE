@@ -187,7 +187,7 @@
 }
 
 @media (min-width:481px) and (max-width:768px){
-      /* catrgory bar start */
+ 
     .categorybar {
         width: 100%;
     }
@@ -199,7 +199,7 @@
     .inner-div{
         margin:0px auto; 
     }
-     /* catrgory bar end */
+
     .category1-heading, .category2-heading {
         margin-left: 80px;
         margin-right: auto;

@@ -39,22 +39,21 @@
           <li><a href="#contact">Contact Us</a></li>
           <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
           <li><a href="EditProfile.html"><i class="fa-solid fa-user"></i></a></li>
-          <!-- <li><a href="EditProfile.html" onclick="toggleMenu(event)"><i class="fa-solid fa-user"></i></a></li> -->
-          <span class="username">Sign in</span>
+        <a href="login.html"><span class="username">Sign in</span></a>
           
         </ul>
     </nav>
     <!-- navbar end -->
 
         <section class="container">
-                
+                <!-- it for sidenavbar for profile edit  -->
                 <aside class="side-navbar">
                     <div class="profile_section">
                         <img src="images/Profileimg.png" class="profileimage">
                         <div onclick="profileimagechange()" class="imgchangediv">Change image</div>
                         <form class="personalinfo">
-                              <input type="text" placeholder="Username" class="userinput" disabled>
-                              <input type="text" placeholder="mobilenumber" class="mobileinput" disabled>
+                              <input type="text" placeholder="Username" class="userinput" disabled maxlength="20">
+                              <input type="number" placeholder="mobilenumber" class="mobileinput" disabled maxlength="20">
                               <input type="text" placeholder="Email" disabled>
                               <input type="submit" value="Update" id="submitinfo">
                         </form>
@@ -66,6 +65,7 @@
                         <div onclick="changepassword()">Password Settings</div>
                     </div>
                 </aside>
+                <!-- end of sidenavbar profile edit -->
              
 
                 <!-- if no orders list this will display -->
@@ -78,10 +78,13 @@
 
                 <!-- If orders this will display -->
                 <div class="orders_list_container">
-                    <!-- <div class="orders"></div> -->
+                  
+
+                  
 
                 </div>
 
+                <!-- it is address -->
                 <div class="addressescontainer">
                     
                 </div>
@@ -99,7 +102,29 @@
                 <div class="closepass" onclick="closepass()"><i class="fa-solid fa-xmark"></i></div>
            </div>
            <!--password area end -->
+
+
+
+           <!-- it is for feedback form -->
+           <section class="feedbackformcontainer">
+              <i class="fa-solid fa-xmark feedclose" onclick="feedclose()"></i>
+              <form>
+                <label>Name</label>
+                <input type="text">
+                <label>Select the Product</label>
+                <select id="purchaseitems">
+
+                </select>
+                <label>Enter Your feedback</label>
+                <textarea rows="10" cols="50">
+
+                </textarea>
+                <input type="submit" value="Submit" id="submitbtn">
+              </form>
+           </section>
+
         <script src="script/EditProfile.js"></script>
         <script src="script/Addaddress.js"></script>
+        <script src="script/script.js"></script>
     </body>
 </html>

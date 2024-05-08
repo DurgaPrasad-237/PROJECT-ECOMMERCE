@@ -4,7 +4,7 @@ let cart_list = document.getElementById("cartlistcount");
 
 // function for responsive navbar
 function navBarToggle(){
-    // let hamburg = document.getElementById("hamburg");
+    let hamburg = document.getElementById("hamburg");
     let navlinkscontainer = document.querySelector(".nav-links-container");
 
 

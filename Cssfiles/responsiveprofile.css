@@ -1,0 +1,118 @@
+.profilecontainer{
+margin-top:120px;
+height:80vh;
+}
+.side-navbar{
+    height:100%;
+    padding: 5px;
+    width:100%;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    background-color: white;
+    position: relative;
+ 
+}
+.profile_section{
+    height:35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.imgchangediv{
+    border:2px solid #338b33;
+    width:100px;
+    border-radius: 10px;
+    height:25px;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right:10px;
+    top:60px;
+    color:white;
+    background-color: #338b33;
+    cursor:pointer;
+}
+.imgchangediv:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.profile_section img{
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.personalinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width:100%;
+    height:50%;
+}
+.personalinfo input[type="text"],.personalinfo input[type="number"]{
+    width:100%;
+    border:none;
+    outline:none;
+    text-align: center;
+    background-color: transparent;
+
+}
+.personalinfo input::placeholder{
+    text-align: center;
+}
+#submitinfo{
+    position: absolute;
+    right:10px;
+    top:28%;
+    background-color:#83AE45;
+    color:white;
+    border:2px solid #83AE45;
+    padding:4px;
+    display: none;
+    cursor: pointer;
+}
+
+
+.ep{
+    position: absolute;
+    right:10px;
+    top:10px;
+    font-size: 12px;
+    color:red;
+    cursor: pointer;
+}
+.links_section{
+    /* border:2px solid black; */
+    height:65%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+ 
+}
+.links_section div{
+    height:10%;
+    width:100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  
+}
+.links_section div:hover{
+    background-color: #82ae4591;
+    color:white;
+}
+.links_section div.active {
+    background-color: #83AE45;
+    color: white;
+}
+.links_section div a::after{
+    height: 0px;
+  }
+ 

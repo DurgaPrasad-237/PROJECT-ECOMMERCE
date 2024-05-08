@@ -64,7 +64,7 @@ function displayAddress(){
 }
 //function for add address
 function addadress(){
-    window.location.href="Profile_Edit.html";
+    window.location.href="../Project-Ecommerce/addnewaddress.html";
 }
 //function for close address
 function closeAddressContainer() {

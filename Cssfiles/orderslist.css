@@ -1,32 +1,93 @@
-.orders-list-container {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.no_orders_display_section{
+    display:none;
+}
+.orders_list_container{
+
+    height:auto;
+    width:100%;
+    margin-top:130px;
+    padding:6px;
+    display:flex;
+    flex-direction: column;
+}
+.orders{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height:auto;
+    width:90%;
+    margin:10px 10px; 
     border-radius: 20px;
-    width: 90%;
-    padding: 10px;
-    margin-top: 130px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: auto; /* Add horizontal scroll if needed */
-}
+    padding:10px;
+    position: relative;
 
-table {
-    border-collapse: collapse;
-    width: 100%;
 }
-
-th, td {
+.orders:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.orders .ordernumber_status{
+    /* text-align: center; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
-    padding: 8px;
-    text-align: left;
 }
-
-th {
-    background-color: #f2f2f2; /* Add background color to header cells */
+.ordernumber_status span{
+    color:#83AE45;
+    font-size: 18px;
 }
-
-td img {
-    max-height: 100px;
-    max-width: 100px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 20px;
+.items,.totalamount,.orderdate{
+    margin-left: 20px;
+    font-size: 20px;
+    color:#838581;
+    margin-top: 10px;  
+}
+.orders li{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.orders p{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.orderhelp{
+    
+    height:60px;
+    width:10vw;
+    position: absolute;
+    right:80px;
+    bottom:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.viewdetailsbtn{
+    padding:3px;
+    background-color: transparent;
+    background-color: #83AE45;
+    color: white;
+    border: 2px solid #83AE45;
+    width:100px;
+   
+    font-size: 14px;
+}
+.viewdetailsbtn:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+.help{
+    display: flex;
+    cursor:pointer;
+    width:30px;
+    background-color: transparent;
+    border:none;
+    color:#f54c4c;
+    font-weight: 550;
+ 
+}
+.help::after{
+    height: 0px;
+}
+.help:hover{
+    color:#c00303
 }

@@ -102,6 +102,8 @@ dummyorderslist = [
 ];
 
 
+
+
 //link activate event listner
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.links_section div');
@@ -118,7 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
     displayOrdersList();
 });
 
-//function to display orders
+
+
+
+//function to display orders----------------------------------------------------------------------
 function displayOrdersList() {
     let addressescontainer = document.querySelector('.addressescontainer');
 
@@ -138,16 +143,19 @@ function displayOrdersList() {
 
 
         let orders_list_container = document.querySelector(".orders_list_container");
+         
 
 
-        dummyorderslist.forEach(order => {
+            dummyorderslist.forEach((order,index) => {
+                   
+
             let ordersdiv = document.createElement('div');
             ordersdiv.classList.add('orders');
 
             //order id
             let OrderNumber = document.createElement('h4');
             OrderNumber.classList.add('ordernumber_status')
-            OrderNumber.innerHTML = `<p><span>Order Number :</span> ${order.orderid}</p> <p><span>Status :</span> ${order.status}</p>`;
+            OrderNumber.innerHTML = `<p><span>Order Number :<br/></span> ${order.orderid}</p> <p><span>Status :<br/></span> ${order.status}</p>`;
             ordersdiv.appendChild(OrderNumber); 
 
             //horizontla line
@@ -187,28 +195,84 @@ function displayOrdersList() {
             orderdate.classList.add('orderdate');
             orderdate.innerHTML = 'Ordered on';
             ordersdiv.appendChild(orderdate); 
+
             //date
             let dateon = document.createElement('p');
             dateon.innerHTML= `${order.orderdate}`;
             ordersdiv.appendChild(dateon);
 
+
+            //orderdetails and feedback
+            let orderhelp = document.createElement('div')
+            orderhelp.classList.add('orderhelp');
+           
+
+
+            //help feedback link
+            let help = document.createElement('button');
+            help.classList.add('help');
+            help.innerHTML = `Help`;
+            help.setAttribute('onclick', `help(${index})`);
+            orderhelp.appendChild(help);
+
             //orderdetailsbutton
             let viewdetails = document.createElement('button');
             viewdetails.innerHTML = `Order Details`;
             viewdetails.classList.add('viewdetailsbtn');
-            ordersdiv.appendChild(viewdetails);
+            orderhelp.appendChild(viewdetails);
 
 
-
+            ordersdiv.appendChild(orderhelp);
 
             orders_list_container.appendChild(ordersdiv); 
         });
     }
 }
 
+//function for help---------------------------------------------------------------
+function help(index){
+    let feedbackformcontainer = document.querySelector(".feedbackformcontainer");
+    let container = document.querySelector('.container');
+
+ 
+   feedbackformcontainer.style.display = "block";
+   container.style.filter = 'blur(5px)'; 
+
+   let purchaseitems = document.getElementById('purchaseitems');
+   let order = dummyorderslist[index];
+   purchaseitems.innerHTML = '';
+   let nulloption = document.createElement('option');
+   nulloption.textContent = '---';
+   purchaseitems.appendChild(nulloption);
+
+   order.items.forEach(item =>{
+    let option = document.createElement('option');
+    option.value = item.productname;
+    option.textContent = item.productname;
+    purchaseitems.appendChild(option);
+   })
+
+   purchaseitems.addEventListener('change', function() {
+    let selectedOption = purchaseitems.options[purchaseitems.selectedIndex];
+    let selectedProductName = selectedOption.value;
+    console.log("Selected product:", selectedProductName);
+});
+   
+}
+//feedback function-------------------------------------------------------------------
+function feedclose(){
+    let feedbackformcontainer = document.querySelector(".feedbackformcontainer");
+    let container = document.querySelector('.container');
+
+ 
+   feedbackformcontainer.style.display = "none";
+   container.style.filter = 'none'; 
+}
 
 
-//function for display orders
+
+
+//function for display orders---------------------------------------------------------
 function displayAddresses() {
     let addressescontainer = document.querySelector('.addressescontainer');
     let orderslist = document.querySelector('.orders_list_container');
@@ -253,20 +317,22 @@ function displayAddresses() {
         addressescontainer.append(addressblock);
     }); 
 }
-//function to open the deleteaddress
+
+
+//function t0  deleteaddress---------------------------------------------------------------
 function deleteaddress(index) {
     let addresses = JSON.parse(localStorage.getItem('addresses')) || [];
     
     if (index >= 0 && index < addresses.length) {
-        addresses.splice(index, 1); // Remove the address at the specified index
-        localStorage.setItem('addresses', JSON.stringify(addresses)); // Update local storage
-        displayAddresses(); // Refresh the displayed addresses
+        addresses.splice(index, 1); 
+        localStorage.setItem('addresses', JSON.stringify(addresses)); 
+        displayAddresses(); 
     } else {
         console.error('Invalid index for address deletion.');
     }
 }
 
-//function for to open changepassword
+//function for to open changepassword---------------------------------------------------------
 function changepassword(){
     let container = document.querySelector('.container');
     container.style.filter = 'blur(5px)'; 
@@ -275,14 +341,15 @@ function changepassword(){
 
    
 }
-//closepass
+//closepass------------------------------------------------------------------------------------
 function closepass(){
     let passwordarea = document.querySelector('.passwordarea');
     passwordarea.style.display = 'none';
     let container = document.querySelector('.container');
     container.style.filter = 'none'; 
+    
 }
-//show currpass
+//show currpass--------------------------------------------------------------------------
 function currpass(){
     let currentinput = document.querySelector('.current-input');
     let curr = document.querySelector('.curr')
@@ -299,7 +366,7 @@ function currpass(){
         curr.style.color = "#83AE45";
     }
 }
-//show newpass
+//show newpass----------------------------------------------------------------------------
 function newpass(){
     let newinput = document.querySelector(".new-input");
     let newpass = document.querySelector('.new')
@@ -316,7 +383,7 @@ function newpass(){
         newpass.style.color = "#83AE45";
     }
 }
-//show confim pass
+//show confim pass-----------------------------------------------------------------------
 function confirmpass(){
     let confinput = document.querySelector(".conf-input");
     let conf = document.querySelector('.conf')
@@ -334,7 +401,7 @@ function confirmpass(){
     }
 }
 
-//function of passcheck
+//function of passcheck-------------------------------------------------------------------
 function checkPasswordMatch() {
     var newPassword = document.querySelector(".new-input").value;
         var confirmPassword = document.querySelector(".conf-input").value;
@@ -349,7 +416,7 @@ function checkPasswordMatch() {
         checking.textContent = "Password Matched";
        }
 }
-//profile change function
+//profile change function-----------------------------------------------------------------
 function profileimagechange(){
     let profileimg = document.querySelector(".profileimage");
     let inputelement = document.createElement("input");
@@ -364,7 +431,7 @@ function profileimagechange(){
     });
     inputelement.click();
 }
-//function for updateprofile
+//function for updateprofile---------------------------------------------------------------
 
 
 function editprofile() {

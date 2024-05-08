@@ -64,7 +64,7 @@
     width:100%;
     height:50%;
 }
-.personalinfo input[type="text"]{
+.personalinfo input[type="text"],.personalinfo input[type="number"]{
     width:100%;
     border:none;
     outline:none;
@@ -158,8 +158,8 @@
 }
 .orders_list_container{
     display: flex;
- 
-    width:73%;
+   
+    width:75%;
     height:100%;
     padding:10px;
     flex-wrap: wrap;
@@ -207,10 +207,18 @@
     margin-left: 20px;
     margin-bottom: 10px;
 }
-.viewdetailsbtn{
+.orderhelp{
+    
+    height:80px;
+    width:10vw;
     position: absolute;
-    bottom:20px;
     right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.viewdetailsbtn{
     padding:10px;
     background-color: transparent;
     background-color: #83AE45;
@@ -221,6 +229,23 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     cursor: pointer;
 }
+.help{
+    display: flex;
+    margin-left: 80%;
+    cursor:pointer;
+    width:30px;
+    background-color: transparent;
+    border:none;
+    color:#f54c4c;
+    font-weight: 550;
+}
+.help::after{
+    height: 0px;
+}
+.help:hover{
+    color:#c00303
+}
+
 
 /* addresses */
 .addressescontainer{
@@ -282,7 +307,10 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     cursor:pointer
 }
-/* change password */
+/* addressarea end */
+
+
+
 .links_section div:nth-child(4){
     height:0vh;
     margin-top:5px;
@@ -290,6 +318,7 @@
 .links_section div:nth-child(4):hover{
     background-color: white;
 }
+
 /* password area start */
 .passwordarea{
     position: absolute;
@@ -301,6 +330,7 @@
     display: none;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 15px;
+ 
 }
 .passwordarea form{
     display: flex;
@@ -350,4 +380,176 @@
 }
 .passwordarea form input[type="submit"]:hover{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;;
+}
+/* password area end*/
+
+
+/* feedback form start */
+.feedbackformcontainer {
+    height: 70vh;
+    width: 40vw;
+    position: absolute;
+    top: 55%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: white;
+    display:none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+
+}
+.feedbackformcontainer form{
+    width:90%;
+    height:100%;
+    margin:auto auto;
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.feedbackformcontainer textarea{
+    background-color: white;
+    border:2px solid black;
+    width:100%;
+    color:black;
+    text-align: start;
+}
+.feedbackformcontainer textarea:focus{
+    text-align: start;
+
+}
+
+.feedbackformcontainer select{
+    width:100%;  
+    height:30px;
+}
+.feedbackformcontainer input{
+    width:100%;
+    height:30px;
+}
+.feedclose{
+    position: absolute;
+    right:20px;
+    top:20px;
+    cursor: pointer;
+}
+
+
+
+
+/* responsive css */
+@media (min-width:621px) and (max-width:768px){
+    .container {
+        width: 100%;
+    }
+    .side-navbar {
+        height: 100%;
+        padding: 5px;
+        width: 45%;
+    }
+    .orders_list_container {
+        width: 55%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        overflow-y: scroll;
+      
+    }
+    .orders {
+        height: auto;
+        width: 100%;
+        margin: 0px 10px;
+        margin-bottom: 10px;
+    }
+    .imgchangediv {
+        width: 80px;
+        right: 10px;
+      
+    }
+    .addressescontainer {
+        width: 55%;
+        height: 100%;
+        display:flex;
+        justify-content: center;
+    }
+      
+    .addressblock, .addaddressblock {   
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px){
+    .container {
+        width: 100%;
+    }
+    .side-navbar {
+        height: 100%;
+        padding: 5px;
+        width: 45%;
+    }
+    .orders_list_container {
+        width: 55%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        overflow-y: scroll;
+      
+    }
+    .orders {
+        height: auto;
+        width: 100%;
+        margin: 0px 10px;
+        margin-bottom: 10px;
+    }
+    .imgchangediv {
+        width: 80px;
+        right: 10px;
+      
+    }
+    .addressescontainer {
+        width: 55%;
+        height: 100%;
+        display:flex;
+        justify-content: center;
+    }
+      
+    .addressblock, .addaddressblock {   
+        height: auto;
+        width: 100%;
+    }
+
+
+}
+@media (min-width:1025px) and (max-width:1200px){
+    .container {
+        width: 100%;
+    }
+    .side-navbar {
+        height: 100%;
+        padding: 5px;
+        width: 35%;
+    }
+     .orders {
+        height: auto;
+        width: 45%;
+        margin: 0px 10px;
+        margin-bottom: 10px;
+    }
+    .addressescontainer {
+        width: 75%;
+        height: 100%;
+        display:flex;
+        justify-content: flex-start;
+
+    }
+      
+    .addressblock, .addaddressblock {   
+        height: auto;
+        width: 45%;
+    }
+
+
 }

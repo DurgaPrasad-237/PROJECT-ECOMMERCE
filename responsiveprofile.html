@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Cssfiles/styles.css"/>
+    <link rel="stylesheet" href="Cssfiles/responsiveprofile.css"/>
+  <title>Profile</title>
+
+</head>
+    <body>
+         <!-- navbar start -->
+  <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" class="logoimg">
+    </div>
+
+    <div class="hamburg" id="hamburg" onclick="navBarToggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="expand-navbar" id="expandnav">
+      <div class="nav-links-container">
+          <a href="index.html">Home</a>
+          <a href="responsiveprofile.html">Profile</a>
+          <a href="shop.html">Shop</a>
+          <a href="responsivecartlist.html">Cart</a>
+          <a>Logout</a>
+      </div>
+    </div>
+
+        <ul class="navlinks">
+                    
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="cartlist.html"><i class="fa-solid fa-cart-shopping"></i><span id="cartlistcount">0</span></a></li>
+          <li><a href="EditProfile.html"><i class="fa-solid fa-user"></i></a></li>
+          <span class="username">Sign in</span>
+          
+        </ul>
+    </nav>
+    <!-- navbar end -->
+
+    <div class="profilecontainer">
+        <aside class="side-navbar">
+            <div class="profile_section">
+                <img src="images/Profileimg.png" class="profileimage">
+                <div onclick="profileimagechange()" class="imgchangediv">Change image</div>
+                <form class="personalinfo">
+                    <input type="text" placeholder="Username" class="userinput" disabled maxlength="20">
+                    <input type="number" placeholder="mobilenumber" class="mobileinput" disabled maxlength="20">
+                    <input type="text" placeholder="Email" disabled>
+                    <input type="submit" value="Update" id="submitinfo">
+                </form>
+                <p class="ep" onclick="editprofile()">Edit Profile</p>
+            </div><hr>
+            <div class="links_section">
+                <div onclick="displayOrdersList()"><a href="orderslist.html">Orders history</a></div>
+                <div onclick="displayAddresses()">Addresses</div>
+                <div onclick="changepassword()">Password Settings</div>
+                <div>Logout</div>
+            </div>
+        </aside>
+    </div>
+
+
+    <script src="script/script.js"></script>
+    </body>
+</html>
